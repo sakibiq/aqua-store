@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #009FE3;
+  --navy: #0A3B5C;
+  --offwhite: #F7F8FA;
+  --skyblue: #DDF4FF;
+  --cyan: #BDEFFF;
+  --hoverblu: #007FBC;
+  --gray: #6B7A89;
+  --border: #D8E2EA;
+  --white: #FFFFFF;
+  --green: #3AB97A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--offwhite);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Sora', sans-serif;
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+  .animate-float-slow {
+    animation: float 5s 1s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--offwhite); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
