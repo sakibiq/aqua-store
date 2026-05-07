@@ -1,5 +1,7 @@
 # AQUA — Premium Hydration Store
 
+Vercel LINK - https://aqua-store-livid.vercel.app/
+
 A production-quality eCommerce landing page built with Next.js, Tailwind CSS, and Framer Motion.
 
 ## Stack
